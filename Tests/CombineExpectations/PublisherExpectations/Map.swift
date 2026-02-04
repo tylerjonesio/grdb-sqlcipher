@@ -1,4 +1,4 @@
-#if canImport(Combine)
+#if canImport(Combine) || canImport(OpenCombineShim)
 import XCTest
 
 extension PublisherExpectations {

@@ -1,5 +1,5 @@
-#if canImport(OpenCombine)
-import OpenCombine
+#if canImport(OpenCombineShim)
+import OpenCombineShim
 #elseif canImport(Combine)
 import Combine
 #endif
@@ -697,7 +697,7 @@ extension DatabaseWriter {
 #endif
 }
 
-#if canImport(Combine)
+#if canImport(Combine) || canImport(OpenCombineShim)
 extension DatabaseWriter {
     // MARK: - Publishing Database Updates
     

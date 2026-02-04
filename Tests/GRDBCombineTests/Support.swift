@@ -1,6 +1,6 @@
-#if canImport(Combine) || canImport(OpenCombine)
-#if canImport(OpenCombine)
-import OpenCombine
+#if canImport(Combine) || canImport(OpenCombineShim)
+#if canImport(OpenCombineShim)
+import OpenCombineShim
 #elseif canImport(Combine)
 import Combine
 #endif

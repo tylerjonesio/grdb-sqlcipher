@@ -1,4 +1,4 @@
-#if canImport(Combine)
+#if canImport(Combine) || canImport(OpenCombineShim)
 import XCTest
 
 /// A name space for publisher expectations

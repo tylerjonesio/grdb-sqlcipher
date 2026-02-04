@@ -1,5 +1,5 @@
-#if canImport(OpenCombine)
-import OpenCombine
+#if canImport(OpenCombineShim)
+import OpenCombineShim
 #elseif canImport(Combine)
 import Combine
 #endif
@@ -664,7 +664,7 @@ public struct DatabaseMigrator: Sendable {
 
 extension DatabaseMigrator: Refinable { }
 
-#if canImport(Combine)
+#if canImport(Combine) || canImport(OpenCombineShim)
 extension DatabaseMigrator {
     // MARK: - Publishing Migrations
     

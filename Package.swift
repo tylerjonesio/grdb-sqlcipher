@@ -94,7 +94,7 @@ let package = Package(
                 //.product(name: "SQLCipher", package: "SQLCipher.swift"),
                 .product(name: "SQLCipher", package: "swift-sqlcipher"),
                 .product(
-                    name: "OpenCombine",
+                    name: "OpenCombineShim",
                     package: "OpenCombine",
                     condition: .when(platforms: [.android, .windows])
                 )

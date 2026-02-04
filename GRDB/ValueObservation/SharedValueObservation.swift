@@ -274,7 +274,7 @@ public final class SharedValueObservation<Element: Sendable>: @unchecked Sendabl
         }
     }
     
-#if canImport(Combine)
+#if canImport(Combine) || canImport(OpenCombineShim)
     /// Returns a publisher of observed values.
     ///
     /// For example:

@@ -1,4 +1,4 @@
-#if canImport(Combine)
+#if canImport(Combine) || canImport(OpenCombineShim)
 import XCTest
 
 // The Finished expectation waits for the publisher to complete, and throws an

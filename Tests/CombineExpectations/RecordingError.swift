@@ -1,4 +1,4 @@
-#if canImport(Combine)
+#if canImport(Combine) || canImport(OpenCombineShim)
 import Foundation
 
 /// An error that may be thrown when waiting for publisher expectations.

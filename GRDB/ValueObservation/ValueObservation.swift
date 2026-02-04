@@ -1,5 +1,5 @@
-#if canImport(OpenCombine)
-import OpenCombine
+#if canImport(OpenCombineShim)
+import OpenCombineShim
 #elseif canImport(Combine)
 import Combine
 #endif
@@ -437,7 +437,7 @@ public struct AsyncValueObservation<Element: Sendable>: AsyncSequence, Sendable 
     }
 }
 
-#if canImport(Combine)
+#if canImport(Combine) || canImport(OpenCombineShim)
 extension ValueObservation {
     // MARK: - Publishing Observed Values
     

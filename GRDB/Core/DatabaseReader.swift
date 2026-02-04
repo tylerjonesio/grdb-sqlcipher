@@ -1,5 +1,5 @@
-#if canImport(OpenCombine)
-import OpenCombine
+#if canImport(OpenCombineShim)
+import OpenCombineShim
 #elseif canImport(Combine)
 import Combine
 #endif
@@ -500,7 +500,7 @@ extension DatabaseReader {
     }
 }
 
-#if canImport(Combine)
+#if canImport(Combine) || canImport(OpenCombineShim)
 extension DatabaseReader {
     // MARK: - Publishing Database Values
     
