@@ -1,5 +1,9 @@
-#if canImport(Combine)
+#if canImport(Combine) || canImport(OpenCombine)
+#if canImport(OpenCombine)
+import OpenCombine
+#elseif canImport(Combine)
 import Combine
+#endif
 import XCTest
 
 /// A Combine subscriber which records all events published by a publisher.

@@ -44,6 +44,8 @@ if ProcessInfo.processInfo.environment["SPI_BUILDER"] == "1" {
 //swiftSettings.append(.define("SQLITE_HAS_CODEC"))
 //swiftSettings.append(.define("SQLCipher"))
 
+dependencies.append(.package(url: "https://github.com/OpenCombine/OpenCombine", branch: "master"))
+
 dependencies
     .append(
         .package(
@@ -91,6 +93,11 @@ let package = Package(
                 // GRDB+SQLCipher: Uncomment the SQLCipher and GRDBSQLCipher dependencies
                 //.product(name: "SQLCipher", package: "SQLCipher.swift"),
                 .product(name: "SQLCipher", package: "swift-sqlcipher"),
+                .product(
+                    name: "OpenCombine",
+                    package: "OpenCombine",
+                    condition: .when(platforms: [.android, .windows])
+                )
             ],
             path: "GRDB",
             resources: [.copy("PrivacyInfo.xcprivacy")],

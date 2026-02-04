@@ -1,4 +1,6 @@
-#if canImport(Combine)
+#if canImport(OpenCombine)
+import OpenCombine
+#elseif canImport(Combine)
 import Combine
 #endif
 import Foundation
