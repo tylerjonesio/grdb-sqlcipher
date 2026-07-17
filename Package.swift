@@ -44,7 +44,7 @@ if ProcessInfo.processInfo.environment["SPI_BUILDER"] == "1" {
 //swiftSettings.append(.define("SQLITE_HAS_CODEC"))
 //swiftSettings.append(.define("SQLCipher"))
 
-dependencies.append(.package(url: "https://github.com/OpenCombine/OpenCombine", revision: "1c6f02c7ed8140c0ba7a783aaddb6e0685a0037b"))
+dependencies.append(.package(url: "https://github.com/tylerjonesio/OpenCombine", revision: "2487b77e9bbad0ca03bf5c696a1c3c6ad1019a30"))
 
 dependencies
     .append(
